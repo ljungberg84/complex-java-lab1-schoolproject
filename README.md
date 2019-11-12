@@ -64,10 +64,10 @@
 
 # changes:
 
-  * /student endpoint changed to students.
-  * /add endpoint replaced with POST method on /students.
+  * '/student' endpoint changed to '/students'.
+  * '/add' endpoint replaced with POST method on '/students'.
   * forename, lastname changed to firstName, lastName.
-  * updateStudent only uses requestbody.
+  * updateStudent() takes requestBody as input and not path params.
   
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
