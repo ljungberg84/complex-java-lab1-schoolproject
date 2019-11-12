@@ -31,7 +31,7 @@
   * description: create a student from request body
   * body: student
   * consumes: JSON
-  * produces:JSON
+  * produces: JSON
   * responsecodes: 201, 400
   
   
@@ -39,7 +39,7 @@
   * path: /
   * path param: email
   * description: delete a student by email
-  * produces:JSON
+  * produces: JSON
   * responsecodes: 204, 404
   
   * # method: PUT
