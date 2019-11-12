@@ -1,5 +1,75 @@
 # Schoolproject
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+# Endpoints:
+  
+  resource: student:
+  {
+  "firstName":"String",
+  "lastName":"String",
+  "email":"String"
+  }
+  
+  base url: localhost:8080/school/students
 
+  
+  method: GET
+  path: /
+  description: list all students
+  produces: JSON
+  responsecodes: 200
+  
+  method: GET
+  path: /
+  Path param: email
+  description: retrieve student by email
+  produces: JSON
+  responsecodes: 200, 404
+  
+  method: POST
+  path: /
+  description: create a student from request body
+  body: student
+  consumes: JSON
+  produces:JSON
+  responsecodes: 201, 400
+  
+  method: DELETE
+  path: /
+  path param: email
+  description: delete a student by email
+  produces:JSON
+  responsecodes: 204, 404
+  
+  method: PUT
+  path: /
+  description: update student from request body
+  body: student
+  consumes: JSON
+  produces: JSON
+  responsecodes: 200, 400, 404
+
+  
+  example curl: 
+  curl --request POST \
+  --url http://localhost:8080/school/students \
+  --header 'content-type: application/json' \
+  --data '{	
+	"firstName":"1",
+	"lastName":"1",
+	"email":"1@gmail.com"
+}	'
+
+
+# changes:
+
+  /student endpoint changed to students.
+  /add endpoint replaced with POST method on /students.
+  forename, lastname changed to firstName, lastName.
+  updateStudent only uses requestbody.
+  
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 Small project for teaching purposes.
 
 * Wildfly
